@@ -1,0 +1,264 @@
+openapi: 3.0.3
+info:
+  title: JSONPlaceholder Albums API
+  version: 1.0.0
+  description: API для работы с альбомами
+servers:
+  - url: https://jsonplaceholder.typicode.com
+
+paths:
+  /albums:
+    get:
+      summary: Get all albums with pagination
+      tags:
+        - Albums
+      parameters:
+        - name: _limit
+          in: query
+          description: |
+            Number of albums to return (max 100)
+            Pagination (_page) is not supported by server
+          required: false
+          schema:
+            type: integer
+            maximum: 100
+            default: 20
+      responses:
+        '200':
+          description: |
+            Successful returned albums.
+            Note: Parameters _limit might be ignored by the server
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Album'
+              example:
+                - userId: 1
+                  id: 1
+                  title: quidem molestiae enim
+                - userId: 1
+                  id: 2
+                  title: sunt qui excepturi placeat culpa
+                - userId: 1
+                  id: 3
+                  title: omnis laborum odio
+                - userId: 1
+                  id: 4
+                  title: non esse culpa molestiae omnis sed optio
+                - userId: 1
+                  id: 5
+                  title: eaque aut omnis a
+                - userId: 1
+                  id: 6
+                  title: natus impedit quibusdam illo est
+                - userId: 1
+                  id: 7
+                  title: quibusdam autem aliquid et et quia
+                - userId: 1
+                  id: 8
+                  title: qui fuga est a eum
+                - userId: 1
+                  id: 9
+                  title: saepe unde necessitatibus rem
+                - userId: 1
+                  id: 10
+                  title: distinctio laborum qui
+                - userId: 2
+                  id: 11
+                  title: quam nostrum impedit mollitia quod et dolor
+                - userId: 2
+                  id: 12
+                  title: consequatur autem doloribus natus consectetur
+                - userId: 2
+                  id: 13
+                  title: ab rerum non rerum consequatur ut ea unde
+                - userId: 2
+                  id: 14
+                  title: ducimus molestias eos animi atque nihil
+                - userId: 2
+                  id: 15
+                  title: ut pariatur rerum ipsum natus repellendus praesentium
+                - userId: 2
+                  id: 16
+                  title: voluptatem aut maxime inventore autem magnam atque repellat
+                - userId: 2
+                  id: 17
+                  title: aut minima voluptatem ut velit
+                - userId: 2
+                  id: 18
+                  title: nesciunt quia et doloremque
+                - userId: 2
+                  id: 19
+                  title: velit pariatur quaerat similique libero omnis quia
+                - userId: 2
+                  id: 20
+                  title: voluptas rerum iure ut enim
+
+    post:
+      summary: Create a new album
+      tags:
+        - Albums
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlbumInput'
+            example:
+              userId: 11
+              title: Гранатовый альбом
+      responses:
+        '201':
+          description: Album created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+              example:
+                userId: 11
+                id: 101
+                title: Гранатовый альбом
+
+  /albums/{id}:
+    get:
+      summary: Get album by ID
+      tags:
+        - Albums
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 10
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+              example:
+                userId: 1
+                id: 10
+                title: distinctio laborum qui
+
+    put:
+      summary: Update the entire album
+      tags:
+        - Albums
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 89
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+            example:
+              userId: 9
+              id: 89
+              title: A Night at the Opera
+      responses:
+        '200':
+          description: Album updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+              example:
+                userId: 9
+                id: 89
+                title: A Night at the Opera
+
+    patch:
+      summary: Partially update the album
+      tags:
+        - Albums
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: integer
+                title:
+                  type: string
+            example:
+              userId: 23
+              title: ut pariatur rerum ipsum natus repellendus praesentium
+      responses:
+        '200':
+          description: Album partially updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+              example:
+                userId: 23
+                id: 15
+                title: ut pariatur rerum ipsum natus repellendus praesentium
+
+    delete:
+      summary: Delete the album
+      tags:
+        - Albums
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 91
+      responses:
+        '204':
+          description: Album deleted successfully
+          content: {}
+
+components:
+  schemas:
+    Album:
+      type: object
+      properties:
+        userId:
+          type: integer
+          example: 1
+        id:
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: quidem molestiae enim
+      required:
+        - userId
+        - id
+        - title
+
+    AlbumInput:
+      type: object
+      properties:
+        userId:
+          type: integer
+          example: 11
+        title:
+          type: string
+          example: Гранатовый альбом
+      required:
+        - userId
+        - title
