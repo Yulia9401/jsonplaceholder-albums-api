@@ -4,9 +4,6 @@
 
 ## 📚 [Swagger UI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Yulia9401/jsonplaceholder-albums-api/main/api.yaml)
 
-Для просмотра интерактивной документации используйте:
-(https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Yulia9401/jsonplaceholder-albums-api/main/api.yaml)
-
 ## 🚀 Примеры запросов (cURL)
 
 ### GET все альбомы
