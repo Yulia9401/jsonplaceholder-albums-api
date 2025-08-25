@@ -144,6 +144,12 @@ paths:
                 userId: 1
                 id: 10
                 title: distinctio laborum qui
+        '404':
+          description: Album not found
+          content:
+            application/json:
+              example:
+                error: "Album with id 166 not found"
 
     put:
       summary: Update the entire album
@@ -177,6 +183,12 @@ paths:
                 userId: 9
                 id: 89
                 title: A Night at the Opera
+        '404':
+          description: Album not found
+          content:
+            application/json:
+              example:
+                error: "Cannot update - album with id 166 not found"
 
     patch:
       summary: Partially update the album
@@ -214,6 +226,12 @@ paths:
                 userId: 23
                 id: 15
                 title: ut pariatur rerum ipsum natus repellendus praesentium
+        '404':
+          description: Album not found
+          content:
+            application/json:
+              example:
+                error: "Cannot update - album with id 166 not found"
 
     delete:
       summary: Delete the album
@@ -230,6 +248,12 @@ paths:
         '204':
           description: Album deleted successfully
           content: {}
+        '404':
+          description: Album not found
+          content:
+            application/json:
+              example:
+                error: "Cannot delete - album with id 166 not found"
 
 components:
   schemas:
