@@ -1,6 +1,7 @@
 # JSONPlaceholder Albums API
 
-Документация API для работы с альбомами. # [Источник данных](https://jsonplaceholder.typicode.com/)
+Документация API для работы с альбомами. 
+## [Источник данных](https://jsonplaceholder.typicode.com/)
 Тренирововчное задание. Работа с музыкальными альбомами без реального сервера и БД. 
 
 ## 🟩 [Swagger UI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Yulia9401/jsonplaceholder-albums-api/main/api.yaml)
