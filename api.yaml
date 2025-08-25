@@ -9,7 +9,7 @@ servers:
 paths:
   /albums:
     get:
-      summary: Get all albums with pagination
+      summary: Get all albums
       tags:
         - Albums
       parameters:
