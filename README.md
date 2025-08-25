@@ -36,5 +36,5 @@ PATCH "https://jsonplaceholder.typicode.com/albums/15"
 DELETE "https://jsonplaceholder.typicode.com/albums/91" \
 ```
 
-# jsonplaceholder-albums-api
-Тренирововчное. Работа с музыкальными альбомами без реального сервера и БД. 
+# [jsonplaceholder-albums-api](https://jsonplaceholder.typicode.com/)
+Тренирововчное задание. Работа с музыкальными альбомами без реального сервера и БД. 
