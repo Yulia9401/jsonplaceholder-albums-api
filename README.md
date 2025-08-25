@@ -5,8 +5,8 @@
 ## 📚 Swagger UI
 
 Для просмотра интерактивной документации используйте:
+https://petstore.swagger.io/?url=https://raw.githubusercontent.com/ivanov/albums-api/main/api.yaml
 
-https://petstore.swagger.io/?url=hhttps://raw.githubusercontent.com/Yulia9401/jsonplaceholder-albums-api/refs/heads/main/openapi%3A%203.0.yml
 ## 🚀 Быстрый старт
 
 ## 🚀 Примеры запросов (cURL)
