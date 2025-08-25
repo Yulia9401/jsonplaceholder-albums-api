@@ -4,7 +4,7 @@
 
 ## 📚 [Swagger UI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/Yulia9401/jsonplaceholder-albums-api/main/api.yaml)
 
-## 🟧 [Postman] (https://best-team-ever-2989.postman.co/workspace/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-REST-API~10dc170f-120e-4dec-a46d-cfea0966ad26/collection/32307980-b62e869a-63a3-4f0b-bd09-3b8be5d23b88?action=share&source=copy-link&creator=32307980) 
+## 🟧 [Postman](https://best-team-ever-2989.postman.co/workspace/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-REST-API~10dc170f-120e-4dec-a46d-cfea0966ad26/collection/32307980-b62e869a-63a3-4f0b-bd09-3b8be5d23b88?action=share&source=copy-link&creator=32307980) 
 
 ## 🚀 Примеры запросов (cURL)
 
