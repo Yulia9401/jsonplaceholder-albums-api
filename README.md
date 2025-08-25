@@ -34,7 +34,6 @@ PATCH "https://jsonplaceholder.typicode.com/albums/15"
 ### DELETE удалить альбом
 ```bash
 DELETE "https://jsonplaceholder.typicode.com/albums/91" \
-"Content-Type: application/json"
 ```
 
 # jsonplaceholder-albums-api
