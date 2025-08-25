@@ -8,50 +8,33 @@
 
 ### GET все альбомы
 ```bash
-curl -X GET "https://jsonplaceholder.typicode.com/albums" \
--H "Content-Type: application/json"
+GET "https://jsonplaceholder.typicode.com/albums" 
 ```
 
 ### GET конкретный альбом  
 ```bash
-curl -X GET "https://jsonplaceholder.typicode.com/albums/10" \
--H "Content-Type: application/json"
+GET "https://jsonplaceholder.typicode.com/albums/10" 
 ```
 
 ### POST создать альбом
 ```bash
-curl -X POST "https://jsonplaceholder.typicode.com/albums" \
--H "Content-Type: application/json" \
--d '{
-  "userId": 11,
-  "title": "Гранатовый альбом"
-}'
+POST "https://jsonplaceholder.typicode.com/albums" 
 ```
 
 ### PUT обновить альбом
 ```bash
-curl -X PUT "https://jsonplaceholder.typicode.com/albums/89" \
--H "Content-Type: application/json" \
--d '{
-  "userId": 9,
-  "id": 89, 
-  "title": "A Night at the Opera"
-}'
+PUT "https://jsonplaceholder.typicode.com/albums/89" 
 ```
 
 ### PATCH частично обновить альбом
 ```bash
-curl -X PATCH "https://jsonplaceholder.typicode.com/albums/15" \
--H "Content-Type: application/json" \
--d '{
-  "title": "Новое название"
-}'
+PATCH "https://jsonplaceholder.typicode.com/albums/15"
 ```
 
 ### DELETE удалить альбом
 ```bash
-curl -X DELETE "https://jsonplaceholder.typicode.com/albums/91" \
--H "Content-Type: application/json"
+DELETE "https://jsonplaceholder.typicode.com/albums/91" \
+"Content-Type: application/json"
 ```
 
 # jsonplaceholder-albums-api
